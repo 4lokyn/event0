@@ -1,0 +1,17 @@
+@import "tailwindcss";
+@import "@heroui/styles";
+
+@import "./themes/default-light.css";
+@import "./themes/default-dark.css";
+
+:root {
+    --field-border-width: var(--border-width);
+
+}
+body {
+    font-family: var(--font-inter);
+}
+
+.font-anton {
+    font-family: var(--font-anton);
+}

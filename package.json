@@ -8,9 +8,19 @@
     "start": "next start"
   },
   "dependencies": {
+    "@heroui/react": "^3.2.6",
+    "@heroui/styles": "^3.2.6",
+    "@hookform/resolvers": "^5.9.1",
+    "@internationalized/date": "^3.12.4",
+    "bcryptjs": "^3.0.3",
+    "moment": "^2.31.0",
+    "mongoose": "^9.11.1",
     "next": "16.3.8",
+    "next-auth": "^4.24.15",
     "react": "19.2.8",
-    "react-dom": "19.2.8"
+    "react-dom": "19.2.8",
+    "react-hook-form": "^7.89.0",
+    "zod": "^4.6.5"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

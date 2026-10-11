@@ -1,15 +1,20 @@
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import { Inter,  Anton} from "next/font/google";
+import "@/style/globals.css";
+import Header from "@/components/nav/Header";
+import Providers from "@/providers";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+const inter = Inter({
+  style: ['normal'],
+  subsets: ['latin'],
+  variable: '--font-inter'
+})
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const anton = Anton({
+  weight: ['400'],
+  style: ['normal'],
+  subsets: ['latin'],
+  variable: '--font-anton'
+})
 
 export const metadata = {
   title: "Create Next App",
@@ -20,9 +25,16 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${inter.variable} ${anton.variable} h-full antialiased`}
+      data-theme='dark'
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+      <Providers>
+        <Header/>
+        {children}
+      </Providers>
+
+      </body>
     </html>
   );
 }
